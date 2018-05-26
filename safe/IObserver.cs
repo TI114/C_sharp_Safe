@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace safe
+namespace safeNamespace
 {
     public interface IObserver
     {
-        void Update();
+        void Update(IState state);
     }
 }
