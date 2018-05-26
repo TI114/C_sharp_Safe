@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace safe
+namespace safeNamespace
 {
     public class Safe : Subject
     {
@@ -51,6 +51,11 @@ namespace safe
                 return true;
             }
             return false;
+        }
+
+        public Boolean ValidPassword(String password)
+        {
+            return password == Password;
         }
     }
 }
