@@ -6,7 +6,32 @@ using System.Threading.Tasks;
 
 namespace safe
 {
-    class Open
+    class Open : IState
     {
+        private static IState status;
+
+        private Open()
+        {
+
+        }
+
+        public static IState GetInstance()
+        {
+            if(status == null)
+            {
+                status = new Open();
+            }
+            return status;
+        }
+
+        public void Close(Safe safe)
+        {
+            // todo: implement logic
+        }
+
+        public void Open(Safe safe)
+        {
+            // stays empty
+        }
     }
 }
