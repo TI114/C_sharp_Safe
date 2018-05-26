@@ -24,12 +24,12 @@ namespace safe
             return status;
         }
 
-        public void safeClose(Safe safe)
+        public void SafeClose(Safe safe)
         {
             // stays empty
         }
 
-        public void safeOpen(Safe safe)
+        public void SafeOpen(Safe safe)
         {
             // todo: implement
         }

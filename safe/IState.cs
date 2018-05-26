@@ -8,7 +8,7 @@ namespace safe
 {
     public interface IState
     {
-        void safeClose(Safe safe);
-        void safeOpen(Safe safe);
+        void SafeClose(Safe safe);
+        void SafeOpen(Safe safe);
     }
 }
