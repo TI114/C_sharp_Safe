@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace safe
 {
-    interface IObserver
+    public interface IObserver
     {
+        void Update();
     }
 }
