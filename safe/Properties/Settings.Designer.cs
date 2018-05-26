@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace safe.Properties
+namespace safeNamespace.Properties
 {
 
 
