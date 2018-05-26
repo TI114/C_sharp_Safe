@@ -26,7 +26,7 @@ namespace safe
 
         public void SafeClose(Safe safe)
         {
-            // todo: implement logic
+            status = Close.GetInstance();
         }
 
         public void SafeOpen(Safe safe)
