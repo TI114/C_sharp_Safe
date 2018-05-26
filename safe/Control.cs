@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace safe
+namespace safeNamespace
 {
     public partial class Control : Form
     {
@@ -25,20 +25,35 @@ namespace safe
             if (TbPassword.Text != "")
             {
                 safe = new Safe(TbPassword.Text);
-                BtnCreate.Enabled = false;
-                
+
             }
             else
             {
                 safe = new Safe();
-                MessageBox.Show("WTF!");
             }
-
+            BtnCreate.Enabled = false;
+            Form1 form1 = new Form1();
+            Form2 form2 = new Form2();
+            form1.Show();
+            form2.Show();
+            safe.Attach(form1, safe.GetStatus());
+            safe.Attach(form2, safe.GetStatus());
         }
 
         private void BtnCloseOpen_Click(object sender, EventArgs e)
         {
-
+            if (safe.GetStatus() == safeNamespace.Close.GetInstance())
+            {
+                if (safe.ValidPassword(TbPassword.Text))
+                {
+                    safe.SetStatus(Open.GetInstance());
+                }
+            }
+            else
+            {
+                safe.SetStatus(safeNamespace.Close.GetInstance());
+            }
+            safe.Notify(safe.GetStatus());
         }
     }
 }
