@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace safe
+namespace safeNamespace
 {
     class Open : IState
     {
