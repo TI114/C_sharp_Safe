@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace safe
+namespace safeNamespace
 {
     public abstract class Subject
     {
         List<IObserver> observerList = new List<IObserver>();
 
-        public void Attach(IObserver observer)
+        public void Attach(IObserver observer, IState state)
         {
             observerList.Add(observer);
-            Notify();
+            Notify(state);
         }
 
         public void Detach(IObserver observer)
@@ -22,11 +22,11 @@ namespace safe
 
         }
 
-        public void Notify()
+        public void Notify(IState state)
         {
             foreach (IObserver observer in observerList)
             {
-                observer.Update();
+                observer.Update(state);
             }
         }
     }
