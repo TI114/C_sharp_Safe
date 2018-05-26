@@ -22,14 +22,16 @@ namespace safe
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            if (TbPassword != null)
+            if (TbPassword.Text != "")
             {
                 safe = new Safe(TbPassword.Text);
                 BtnCreate.Enabled = false;
+                
             }
             else
             {
                 safe = new Safe();
+                MessageBox.Show("WTF!");
             }
 
         }
