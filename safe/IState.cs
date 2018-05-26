@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace safe
 {
-    interface IState
+    public interface IState
     {
+        void safeClose(Safe safe);
+        void safeOpen(Safe safe);
     }
 }
