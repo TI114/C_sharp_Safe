@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace safe
 {
-    public partial class Form2 : Form
+    public partial class Form2 : Form, IObserver
     {
         public Form2()
         {
