@@ -31,7 +31,7 @@ namespace safe
 
         public void SafeOpen(Safe safe)
         {
-            // todo: implement
+            status = Open.GetInstance();
         }
     }
 }
