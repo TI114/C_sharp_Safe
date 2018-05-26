@@ -19,9 +19,19 @@ namespace safe
             set { password = value; }
         }
 
+        public IState GetStatus()
+        {
+            return status;
+        }
+
+        public void SetStatus(IState status)
+        {
+            this.status = status;
+        }
+
         public Safe()
         {
-            status.SafeClose(this);
+            status = Close.GetInstance();
         }
 
         public Safe (String password)
@@ -31,7 +41,7 @@ namespace safe
                 Password = password;
             }
 
-            status.SafeClose(this);
+            status = Close.GetInstance();
         }
 
         private Boolean ValidatePassword(String password)
