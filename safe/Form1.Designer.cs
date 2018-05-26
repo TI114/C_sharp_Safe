@@ -1,4 +1,4 @@
-﻿namespace safe
+﻿namespace safeNamespace
 {
     partial class Form1
     {
